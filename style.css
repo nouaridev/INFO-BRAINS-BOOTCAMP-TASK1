@@ -1,0 +1,138 @@
+body{
+    box-sizing: border-box;
+    padding: 0 ;
+    margin: 0;
+    max-width:  100vw;
+    overflow: hidden;
+    
+    min-height: 100vh;
+
+    background-color: var(--Grayish-purple);
+    font-family: work-;
+
+    position: relative ; 
+    
+    
+}
+
+
+/* background img */
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+:root{
+    --White: hsl(0, 0%, 100%) ;
+    --Light-pink: hsl(275, 100%, 97%) ;
+    --Grayish-purple: hsl(292, 16%, 49%) ;
+    --Dark-purple: hsl(292, 42%, 14%) ;
+}
+
+
+
+/* the fq container */
+
+.faqsContainer{
+    background-color: var(--Light-pink);
+    max-width: 300px;
+    min-width: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+
+    border-radius: 9px;
+    padding: 20px 20px;
+}
+
+.faqsContainer>h1{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+
+/* the card wraper (fragment) */
+.faqsContainer .fCards{
+    display: flex;
+    flex-direction: column;
+}
+
+.faqsContainer .fCards .card{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.141);
+    transition: 1s;
+}
+.faqsContainer .fCards .card:not(:nth-child(1)){
+    margin-top: 30px;
+}
+
+.faqsContainer .fCards .card .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faqsContainer .fCards .top h2{
+    font-size: 12px;
+    font-weight:500;
+}
+
+
+/* styling the moins / plus btns */
+.plus , .moins{
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   background-color: var(--Dark-purple);
+
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: var(--White);
+
+   cursor: pointer;
+}
+
+.plus{
+    background-color: rgb(95, 7, 211);
+}
+
+/* for hide plus | moins btn  */
+.hiddenbtn {
+    display: none;
+}
+
+
+
+/* stylin the faq response */
+.faqsContainer .fCards .card .bottom{
+        max-height: 0;
+        overflow: hidden;
+     
+        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        opacity: 0;
+    
+}
+
+.faqsContainer .fCards .card .bottom p {
+    font-size: 10px;
+    font-weight: 200;
+    line-height: 1.5;
+    color: rgb(113, 109, 109);
+}
+
+/* show the response  */
+
+
+.faqsContainer .fCards .card .show{
+   max-height: 100px;  
+   opacity: 1;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+
+
