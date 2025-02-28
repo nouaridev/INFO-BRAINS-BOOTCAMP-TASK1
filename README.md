@@ -1,1 +1,1 @@
-#link : quiet-frangipane-c44a31.netlify.app
+link : quiet-frangipane-c44a31.netlify.app
